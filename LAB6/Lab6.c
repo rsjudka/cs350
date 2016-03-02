@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 //
 void initialize_CPU(CPU *cpu) {
 	
-	// *** STUB *** start
+	// *** STUB ***
 	for (int i = 0; i < NREG; i++)
 	{
 		cpu -> reg[i] = 0;
