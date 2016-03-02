@@ -46,6 +46,7 @@ int main(int argc, char *argv[]) {
 	CPU cpu_value, *cpu = &cpu_value;
 	initialize_CPU(cpu);
 	initialize_memory(argc, argv, cpu);
+	printf("\n");
 
 	// That's it for Lab 6
 	//
