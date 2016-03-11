@@ -134,7 +134,7 @@ int execute_command(char cmd_char, CPU *cpu) {
     // *** STUB ****
 	else if (cmd_char == 'q')
 	{
-		printf("Now quiting. Goodbye.");
+		printf("Now quiting. Goodbye.\n");
 		return 1;
 	}
 	else if (cmd_char == 'd')
