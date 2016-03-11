@@ -317,6 +317,9 @@ void one_instruction_cycle(CPU *cpu) {
 	
 	int tempReg;
 	char outChar;
+	char cmd_line[CMD_LINE_LEN];
+	char usr_char;
+	char *read_success;
     switch (cpu -> opcode) {
     case 0: 
 		printf("%.2d % .4d   %s\t\t |  Running flag <- 0\n", instr_loc, (*cpu).ir, instr[(*cpu).opcode]);
@@ -376,13 +379,14 @@ void one_instruction_cycle(CPU *cpu) {
 		}
 		break;
 	case 90: 
+		#define CMD_LINE_LEN 80
 		printf("%.2d % .4d   %s\t\t |  ", instr_loc, (*cpu).ir, instr[(*cpu).opcode]);
 		printf("Enter a char mate (and/or press return): ");
-		char userInput = getchar();
-		char str[100];
-		scanf("%s", str);
-		(*cpu).reg[0] = userInput;
-		printf("\t\t\t |  R0 <- %d%c", (*cpu).reg[0], getchar());
+		read_success = fgets(cmd_line, CMD_LINE_LEN, stdin);
+		usr_char = *read_success;
+		(*cpu).reg[0] = usr_char;
+		//printf("\t\t\t |  R0 <- %d%c", (*cpu).reg[0], getchar());
+		printf("\t\t\t |  R0 <- %d\n", (*cpu).reg[0]);
 		break;
 	case 91:
 		outChar = (*cpu).reg[0];
