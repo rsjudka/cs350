@@ -1238,5 +1238,5 @@ void dump_memory(CPU *cpu, Word start, int single) {
 //Print all 8 register values
 void dump_registers(CPU *cpu) {
 	printf("\nR0: x%.4hX % .5d\tR1: x%.4hX % .5d\tR2: x%.4hX % .5d\tR3: x%.4hX % .5d", (*cpu).reg[0], (*cpu).reg[0], (*cpu).reg[1], (*cpu).reg[1], (*cpu).reg[2], (*cpu).reg[2], (*cpu).reg[3], (*cpu).reg[3]);
-	printf("\nR4: x%.4hX % .5d\tR5: x%.4hX % .5d\tR6: x%.4hX % .5d\tR7: x%.4hX % .5d", (*cpu).reg[4], (*cpu).reg[5], (*cpu).reg[5], (*cpu).reg[6], (*cpu).reg[6], (*cpu).reg[7], (*cpu).reg[7]);
+	printf("\nR4: x%.4hX % .5d\tR5: x%.4hX % .5d\tR6: x%.4hX % .5d\tR7: x%.4hX % .5d", (*cpu).reg[4], (*cpu).reg[4], (*cpu).reg[5], (*cpu).reg[5], (*cpu).reg[6], (*cpu).reg[6], (*cpu).reg[7], (*cpu).reg[7]);
 }
