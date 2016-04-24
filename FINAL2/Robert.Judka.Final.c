@@ -286,7 +286,7 @@ void help_message(void) {
 	printf("\t's' - *dumps a specific section of memory\n");
 	printf("\tan integer > 0 - executes N instruction cycles (don't get too crazy with this one!)\n");
 	printf("\treturn - executes one instruction cycle\n");
-	printf("\t\t*(*YOU MUST ENTER A 4-DIGITHEX VALUE OR ELSE!)\n");
+	printf("\t\t*(*YOU MUST ENTER A 4-DIGIT HEX VALUE OR ELSE!)\n");
 	printf("\t\t\t*this assumption was approved by Dr. Jim Sasaki\n");
 }
 
